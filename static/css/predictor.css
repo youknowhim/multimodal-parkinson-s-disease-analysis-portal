@@ -1,0 +1,51 @@
+#parent {
+    border: 1px solid #000;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(26, 87, 166, 1);
+    background-color: rgba(214, 230, 242, 1);
+    font-size: 12pt;
+    -webkit-border-bottom-left-radius: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15pxs;
+    /* border: 1px solid black; */
+}
+
+#wrapper .child2,.child1
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+#wrapper form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+#wrapper form .child1 .voiceinput{
+    width: 100%;
+    height: 350px;
+    padding:20px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+}
+.voiceinput input{
+    width: 150px;
+}
+div.clear {
+    clear: both;
+}
+

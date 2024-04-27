@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/output.css')}}">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="s1 a">
+            <h1>Spiral Design Analysis</h1>
+            <img src="{{ url_for('serve_uploaded_image', filename=item) }}" alt="">
+            <h2>{{ires}} Image</h2>
+            <p>The spiral design is used as a diagnostic tool for Parkinson’s disease (PD). When individuals with PD are
+                asked to draw a spiral, the drawing can reveal characteristics associated with the disease. For example,
+                spirals drawn by people with PD may appear distorted or irregular compared to those drawn by healthy
+                individuals due to the motor symptoms of PD, such as <strong>tremors, slow movement, and
+                    rigidity</strong></p>
+        </div>
+        <div class="s2 a">
+            <h1>Parkinson's Disease</h1>
+            <p>Analysis of Parkinson's Disease using Different <span> Machine learning</span> models</p>
+            <img src="{{url_for('static', filename='img/man.png')}}" alt="">
+            <p id="s2p">Parkinson's disease is a progressive disorder that affects the nervous system and the parts of the body controlled by the nerves. Symptoms start slowly. The first symptom may be a barely noticeable tremor in just one hand. </p>
+        </div>
+        <div class="s3 a">
+            <h1>Voice Data Analysis</h1>
+            <div class="table">
+                <table>
+                    <thead>
+                        <th>Parameter</th>
+                        <th>Data</th>
+                    </thead>
+                    <tr>
+                        <td>MDVP:Fo(Hz) </td>
+                        <td>{{data[0]}}</td>
+                    </tr>
+                    <tr>
+                        <td>MDVP:Fhi(Hz)</td>
+                        <td>{{data[1]}}</td>
+                    </tr>
+                    <tr>
+                        <td>MDVP:Flo(Hz) </td>
+                        <td>{{data[2]}}</td>
+                    </tr>
+                    <tr>
+                        <td>MDVP:Jitter(%)</td>
+                        <td>{{data[2]}}</td>
+                    </tr>
+                    <tr>
+                        <td>MDVP:Jitter(Abs)</td>
+                        <td>{{data[4]}}</td>
+                    </tr>
+                    <tr>
+                        <td>MDVP:RAP, </td>
+                        <td>{{data[5]}}</td>
+                    </tr>
+                    <tr>
+                        <td>MDVP:PPQ</td>
+                        <td>{{data[6]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Jitter:DDP </td>
+                        <td>{{data[7]}}</td>
+                    </tr>
+                    <tr>
+                        <td>MDVP:Shimmer</td>
+                        <td>{{data[8]}}</td>
+                    </tr>
+                    <tr>
+                        <td>MDVP:Shimmer(dB)</td>
+                        <td>{{data[9]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Shimmer:APQ3</td>
+                        <td>{{data[10]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Shimmer:APQ5</td>
+                        <td>{{data[11]}}</td>
+                    </tr>
+                </table>
+                <table>
+                    <thead>
+                        <th>Parameter</th>
+                        <th>Data</th>
+                    </thead>
+                    <tr>
+                        <td>MDVP:APQ</td>
+                        <td>{{data[12]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Shimmer:DDA </td>
+                        <td>{{data[13]}}</td>
+                    </tr>
+                    <tr>
+                        <td>NHR HNR </td>
+                        <td>{{data[14]}}</td>
+                    </tr>
+                    <tr>
+                        <td>status </td>
+                        <td>{{data[15]}}</td>
+                    </tr>
+                    <tr>
+                        <td>RPDE</td>
+                        <td>{{data[16]}}</td>
+                    </tr>
+                    <tr>
+                        <td>D2 </td>
+                        <td>{{data[17]}}</td>
+                    </tr>
+                    <tr>
+                        <td>DFA </td>
+                        <td>{{data[18]}}</td>
+                    </tr>
+                    <tr>
+                        <td>spread1</td>
+                        <td>{{data[19]}}</td>
+                    </tr>
+                    <tr>
+                        <td>spread2</td>
+                        <td>{{data[20]}}</td>
+                    </tr>
+                    <tr>
+                        <td>PPE </td>
+                        <td>{{data[21]}}</td>
+                    </tr>
+
+                </table>
+            </div>
+            <h2>voice {{vres[0][0]}}</h2>
+            <p>Parkinson's disease can cause stiffness in the rib cage and weakness in the diaphragm, which means people with hypokinetic dysarthria have to speak from their belly and have less air control. Additionally, the muscles in the larynx (voice box) that control the vocal folds may stop working properly</p>
+        </div>
+    </div>
+
+
+    <!-- 
+{{data}}
+
+
+voice {{vres}}
+<hr>
+<div style="display: flex; align-items: center; justify-content: center;"></div> -->
+</body>
+
+</html>

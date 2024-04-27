@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Heart Disease Analysis &amp; Prediction</title>
+
+  <link href="{{ url_for('static', filename='css/styles-merged.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/style.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='fonts/icomoon/style.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/predictor.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/back-to-top.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="{{ url_for('static', filename='js/back-to-top.js')}}"></script>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default probootstrap-navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed"
+                    data-target="#navbar-collapse" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Parkinson's Disease Analysis &amp; Prediction</a>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a data-nav-section="home" href="#">Home</a></li>
+                    <li><a data-nav-section="features" href="#">Features</a></li>
+                    <li><a data-nav-section="predict" href="#">Predict</a></li>
+                    <li><a data-nav-section="analysis" href="#">Analysis</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="probootstrap-hero prohttp://localhost/probootstrap/frame/#featuresbootstrap-slant"
+        data-section="home" data-stellar-background-ratio="0.5" id="home" style="background-image: url('{{ url_for('static', filename='img/main_back.jpg')}}')"
+>
+        <div class="container">
+            <div class="row intro-text">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h1 class="probootstrap-heading probootstrap-animate" style="color:#E0F7FA">Predict your chance of
+                        having Parkinson's disease</h1>
+                    <div class="probootstrap-subheading center">
+                        <p class="probootstrap-animate"><a class="btn btn-primary" href="#predict" role="button">Check
+                                Now</a><a class="btn btn-default smoothscroll" href="#analysis" role="button">See
+                                Analysis</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="btn btn-primary" id="backToTopBtn" onclick="topFunction()" title="Go to top">
+        <span class="icon icon-align-top"></span>
+    </button>
+
+    <section class="probootstrap-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+                        <span class="icon icon-phone3"></span>
+                        <h2>Mobile Optimize</h2>
+                        <p>Optimized for viewing on different platforms and devices. Looks the same on every mobile,
+                            laptops, PCs and tablets. A smooth, continous flow.</p>
+                        <p><a class="probootstrap-link" href="#features">Learn More <i
+                                    class="icon-chevron-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+                        <span class="icon icon-wallet2"></span>
+                        <h2>Decrease Costs</h2>
+                        <p>Examine your reports by yourself. Predict the chance of having Parkinson's disease free
+                            of cost.</p>
+                        <p><a class="probootstrap-link" href="#predict">Learn More <i
+                                    class="icon-chevron-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+                        <span class="icon icon-lightbulb"></span>
+                        <h2>Smart Idea</h2>
+                        <p>Great accuracy. Accurate prediction rates. Analysis and prediction based on large samples of
+                            data.</p>
+                        <p><a class="probootstrap-link" href="#analysis">Learn More <i
+                                    class="icon-chevron-right"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="probootstrap-section probootstrap-bg-light" data-section="features" id="features">
+        <div class="container">
+            <div class="row text-center mb100">
+                <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+                    <h2 class="mb30 text-black probootstrap-heading">Features</h2>
+                    <p>Loads of features. Making it easier for anyone to predict the chance of Parkinson's disease.
+                        Shows
+                        analysis done on large data sets.</p>
+                </div>
+            </div>
+            <!-- END row -->
+            <!-- END row -->
+            <div class="row mb100">
+                <div class="col-md-4 probootstrap-section-heading">
+                    <h3 class="text-primary probootstrap-heading-2">Analysis Data Set and Code Available <span
+                            class="icon icon-database2"></span></h3>
+                    <p>Data set on which the analysis is done is available. Also, the code used for analysing the data
+                        and
+                        get prediction rates is made available.</p>
+                    <ul class="probootstrap-list">
+                        <li class="probootstrap-check">Clone at <a class="probootstrap-link"
+                                href="https://github.com/Byte7/Heart-Disease-Analysis-and-Prediction.git"
+                                target="_blank">GitHub
+                                <span class="icon icon-github"></span></a></li>
+                        <li class="probootstrap-check">Open Source</li>
+                        <li class="probootstrap-check">View, modify and use freely under GNU GPL-3.0 license</li>
+                    </ul>
+                </div>
+                <div class="col-md-8 probootstrap-animate">
+                    <p><img alt="Analysis GitHub Page" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/analysis_githubpage.jpg')}}"></p>
+                </div>
+            </div>
+            <!-- END row -->
+            <div class="row mb100">
+                <div class="col-md-8 probootstrap-animate">
+                    <p><img alt="Dataset" class="img-responsive probootstrap-shadow" src="{{ url_for('static', filename='img/dataset.png')}}"></p>
+                </div>
+                <div class="col-md-4 probootstrap-section-heading">
+                    <h3 class="text-primary probootstrap-heading-2">Vast and Reliable Dataset <span
+                            class="icon icon-database2"></span></h3>
+                    <p>This database contains 76 attributes, but all published experiments refer to using a subset of 14
+                        of
+                        them. In particular, the Cleveland database is the only one that has been used by ML researchers
+                        to
+                        this date.</p>
+                    <ul class="probootstrap-list">
+                        <li class="probootstrap-check">Dataset available at <a class="probootstrap-link"
+                                href="http://archive.ics.uci.edu/ml/datasets/Heart+Disease" target="_blank">UCI <span
+                                    class="icon icon-database"></span></a></li>
+                        <li class="probootstrap-check">Contains 76 attributes</li>
+                        <li class="probootstrap-check">Report on subset of 14 such attributes</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END row -->
+            <div class="row mb100">
+                <div class="col-md-4 probootstrap-section-heading">
+                    <h3 class="text-primary probootstrap-heading-2">Analysis Using Python and Jupyter Notebook</h3>
+                    <p>The code used for analysis of data and getting prediction rates is pretty simple. The code is
+                        written
+                        in Python and Jupyter Notebook.</p>
+                    <ul class="probootstrap-list">
+                        <li class="probootstrap-check">Clone at <a class="probootstrap-link"
+                                href="https://github.com/Byte7/Heart-Disease-Analysis-and-Prediction.git"
+                                target="_blank">GitHub
+                                <span class="icon icon-github"></span></a></li>
+                        <li class="probootstrap-check">Easy to understand</li>
+                        <li class="probootstrap-check">Easy to modify</li>
+                        <li class="probootstrap-check">Written in Python and Jupyter Notebook</li>
+                    </ul>
+                </div>
+                <div class="col-md-8 probootstrap-animate">
+                    <p><img alt="Analysis Language" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/analysis_language.png')}}"></p>
+                </div>
+            </div>
+            <!-- END row -->
+        </div>
+    </section>
+    <!-- END section -->
+
+    <section class="probootstrap-section" data-section="predict" id="predict">
+        <div class="container">
+            <div class="row text-center mb100">
+                <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+                    <h2 class="mb30 text-black probootstrap-heading">Predict your Chance of Having a Heart Disease</h2>
+                    <p>Enter the appropriate values of symptoms you face. Get the chances of you contracting heart
+                        disease
+                        based on those values.</p>
+                </div>
+            </div>
+            <!-- END row -->
+            <!-- Main Div -->
+            <div id="parent">
+                <div id="wrapper">
+                    <div style="text-align: center;">
+                        <h1 class="text-black probootstrap-heading">Heart Disease Predictor</h1>
+                    </div>
+                    <form action="/" enctype="multipart/form-data" method="post">
+                        <div class="child1">
+                            <h2>Upload Model to process Voice Dataset</h2>
+                            <input type="file" id="voicemodelFile" name="voicemodelFile" accept=".h5">
+                            <div class="voiceinput">
+                                <label for="MDVP_Fo">MDVP:Fo (Hz):</label>
+                                <input type="range" id="MDVP_Fo" name="MDVP_Fo" min="0" max="500" step="0.00001"value="228.83200">
+                                <span class="slider-value" id="MDVP_Fo_Value">0</span>
+                                
+                                <label for="MDVP_Fhi">MDVP:Fhi (Hz):</label>
+                                <input type="range" id="MDVP_Fhi" name="MDVP_Fhi" min="0" max="1000" step="0.00001"value="234.61900">
+                                <span class="slider-value" id="MDVP_Fhi_Value">0</span>
+                                
+                                <label for="MDVP_Flo">MDVP:Flo (Hz):</label>
+                                <input type="range" id="MDVP_Flo" name="MDVP_Flo" min="0" max="500"step="0.00001" value="223.63400">
+                                <span class="slider-value" id="MDVP_Flo_Value">0</span>
+                                
+                                <label for="MDVP_Jitter">MDVP:Jitter (%):</label>
+                                <input type="range" id="MDVP_Jitter" name="MDVP_Jitter" min="0" max="1" step="0.00001" value="0.00296">
+                                <span class="slider-value" id="MDVP_Jitter_Value">0</span>
+                                
+                                <label for="MDVP_Jitter_Abs">MDVP:Jitter(Abs):</label>
+                                <input type="range" id="MDVP_Jitter_Abs" name="MDVP_Jitter_Abs" min="0" max="0.1" step="0.00001" value="0.00001">
+                                <span class="slider-value" id="MDVP_Jitter_Abs_Value">0</span>
+                                
+                                <label for="MDVP_RAP">MDVP:RAP:</label>
+                                <input type="range" id="MDVP_RAP" name="MDVP_RAP" min="0" max="0.1" step="0.00001" value="0.00175">
+                                <span class="slider-value" id="MDVP_RAP_Value">0</span>
+                                
+                                <label for="MDVP_PPQ">MDVP:PPQ:</label>
+                                <input type="range" id="MDVP_PPQ" name="MDVP_PPQ" min="0" max="0.1" step="0.00001" value="0.00155">
+                                <span class="slider-value" id="MDVP_PPQ_Value">0</span>
+                                
+                                <label for="Jitter_DDP">Jitter:DDP:</label>
+                                <input type="range" id="Jitter_DDP" name="Jitter_DDP" min="0" max="0.1" step="0.00001" value="0.00526">
+                                <span class="slider-value" id="Jitter_DDP_Value">0</span>
+                                
+                                <label for="MDVP_Shimmer">MDVP:Shimmer:</label>
+                                <input type="range" id="MDVP_Shimmer" name="MDVP_Shimmer" min="0" max="0.1" step="0.00001" value="0.01644">
+                                <span class="slider-value" id="MDVP_Shimmer_Value">0</span>
+                                
+                                <label for="MDVP_Shimmer_dB">MDVP:Shimmer(dB):</label>
+                                <input type="range" id="MDVP_Shimmer_dB" name="MDVP_Shimmer_dB" min="0" max="10" step="0.00001" value="0.14500">
+                                <span class="slider-value" id="MDVP_Shimmer_dB_Value">0</span>
+                                
+                                <label for="Shimmer_APQ3">Shimmer:APQ3:</label>
+                                <input type="range" id="Shimmer_APQ3" name="Shimmer_APQ3" min="0" max="0.1" step="0.00001" value="0.00882">
+                                <span class="slider-value" id="Shimmer_APQ3_Value">0</span>
+                                
+                                <label for="Shimmer_APQ5">Shimmer:APQ5:</label>
+                                <input type="range" id="Shimmer_APQ5" name="Shimmer_APQ5" min="0" max="0.1" step="0.00001" value="0.01075">
+                                <span class="slider-value" id="Shimmer_APQ5_Value">0</span>
+                                
+                                <label for="MDVP_APQ">MDVP:APQ:</label>
+                                <input type="range" id="MDVP_APQ" name="MDVP_APQ" min="0" max="0.1" step="0.00001" value="0.01179">
+                                <span class="slider-value" id="MDVP_APQ_Value">0</span>
+                                
+                                <label for="Shimmer_DDA">Shimmer:DDA:</label>
+                                <input type="range" id="Shimmer_DDA" name="Shimmer_DDA" min="0" max="1" step="0.00001" value="0.02647">
+                                <span class="slider-value" id="Shimmer_DDA_Value">0</span>
+                                
+                                <label for="NHR">NHR:</label>
+                                <input type="range" id="NHR" name="NHR" min="0" max="0.1" step="0.00001" value="0.00351">
+                                <span class="slider-value" id="NHR_Value">0</span>
+                                
+                                <label for="HNR">HNR:</label>
+                                <input type="range" id="HNR" name="HNR" min="0" max="100" step="0.00001" value="25.96400">
+                                <span class="slider-value" id="HNR_Value">0</span>
+                                
+                                <label for="RPDE">RPDE:</label>
+                                <input type="range" id="RPDE" name="RPDE" min="0" max="1" step="0.00001" value="0.256570">
+                                <span class="slider-value" id="RPDE_Value">0</span>
+                                
+                                <label for="DFA">DFA:</label>
+                                <input type="range" id="DFA" name="DFA" min="0" max="1" step="0.00001" value="0.683296">
+                                <span class="slider-value" id="DFA_Value">0</span>
+                                
+                                <label for="spread1">spread1:</label>
+                                <input type="range" id="spread1" name="spread1" min="-10" max="10" step="0.000001" value="-7.245620">
+                                <span class="slider-value" id="spread1_Value">0</span>
+                                
+                                <label for="spread2">spread2:</label>
+                                <input type="range" id="spread2" name="spread2" min="0" max="1" step="0.000001" value="0.018689">
+                                <span class="slider-value" id="spread2_Value">0</span>
+                                
+                                <label for="D2">D2:</label>
+                                <input type="range" id="D2" name="D2" min="0" max="10" step="0.000001" value="2.498224">
+                                <span class="slider-value" id="D2_Value">0</span>
+                                
+                                <label for="PPE">PPE:</label>
+                                <input type="range" id="PPE" name="PPE" min="0" max="1" step="0.000001" value="0.093534">
+                                <span class="slider-value" id="PPE_Value">0</span>
+                                <script>
+                                    document.querySelectorAll('input[type="range"]').forEach(function (input) {
+                                        var output = document.getElementById(input.id + '_Value');
+                                        output.innerHTML = input.value;
+
+                                        input.addEventListener('input', function () {
+                                            output.innerHTML = this.value;
+                                        });
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="child2">
+                            <h2>Upload Model to process spiral image</h2>
+                            <input type="file" id="imgmodelFile" name="imgmodelFile" accept=".h5">
+                            <br><br>
+                            <h2>Upload an Image to Process</h2>
+                            <input type="file" id="imageFile" name="imageFile" accept="image/*">
+                        </div>
+                        <hr>
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+    <section class="probootstrap-section probootstrap-bg-light" data-section="analysis" id="analysis">
+        <div class="container">
+            <div class="row text-center mb100">
+                <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+                    <h2 class="mb30 text-black probootstrap-heading">Analysis Results Based on Dataset Available</h2>
+                    <p>Model's accuracy is 87.3 +- 1.4%. The following are the results of analysis done on the available
+                        heart disease dataset. Each graph shows the result based on different attributes.</p>
+                    <p>Green box indicates No Disease. Red box indicates Disease.</p>
+                    <img alt="Flow of Analysis" class="img-responsive probootstrap-shadow" src="{{ url_for('static', filename='img/flow.jpg')}}">
+                </div>
+            </div>
+            <!-- END row -->
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Age" class="img-responsive probootstrap-shadow" src="{{ url_for('static', filename='img/plots/age.jpg')}}">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Excercise Induced Angina" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/plots/angina.jpg')}}">
+                    </div>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Type of Chest Pain" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/plots/chestpain.jpg')}}">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="ST Depression Induced by Excercise" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/plots/depression.jpg')}}">
+                    </div>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Fasting Blood Sugar" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/plots/fastingsugar.jpg')}}">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Major Vessels Colored by Fluoroscopy" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/plots/fluoroscopy.jpg')}}">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Slope of Peak Excercise ST Segment" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/plots/peak.jpg')}}">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Rest ECG" class="img-responsive probootstrap-shadow" src="{{ url_for('static', filename='img/plots/restecg.jpg')}}">
+                    </div>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Resting Blood Pressure" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/plots/restingbp.jpg')}}">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Serum Cholestrol" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/plots/serumchol.jpg')}}">
+                    </div>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Sex" class="img-responsive probootstrap-shadow" src="{{ url_for('static', filename='img/plots/sex.jpg')}}">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Thalium Stress Test Result" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/plots/thaliumstress.jpg')}}">
+                    </div>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="probootstrap-testimonial">
+                        <img alt="Thalium Test Max. Stress Rate" class="img-responsive probootstrap-shadow"
+                            src="{{ url_for('static', filename='img/plots/thaliumtest.jpg')}}">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="probootstrap-section probootstrap-cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h2 class="probootstrap-heading">Future Scope</h2>
+                    <p class="probootstrap-sub-heading">We can embed this application into a real time system which has
+                        sensors that measure certain attributes. This will help us get prediction and alerts in real
+                        time
+                        based on the body condition of the user.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/scripts.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js')}}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+body{
+    background-color: rgba(37, 37, 37, 0.884);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    height: 80vh;
+    width: 100vw;
+    background-color: rgba(115, 113, 113, 0.639);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:2vw;
+    border-top:2px dotted rgb(255, 29, 29) ;
+}
+.a{
+    width: 30vw;
+    height: 100%;
+    border-left: 2px dotted rgb(255, 29, 29);
+    border-right: 2px dotted rgb(255, 29, 29);
+}
+.s2{
+    padding: 0 1vw;
+}
+.s2 h1{
+    color: white;
+    background-color: rgb(21, 238, 21);
+    height: 6vw;
+}
+.s2 p{
+    width: 30%;
+    font-size: 1.2vw;
+   color: rgb(222,19,53);
+   float: left;
+   position: relative;
+   z-index: 1;
+}
+.s2 span{
+    color: rgb(222, 19, 53);
+    font-size: 4vw;
+}
+.s1,.s3{
+    border-bottom: 2px solid black;
+    padding: 0 1vw;
+}
+.s2 img{
+    float: right;
+    height: 60%;
+    z-index: 0;
+}
+.s1 h2,.s3 h2{
+    color: white;
+    font-size: 2vw;
+}
+.s1 p,.s3 p{
+    color: black;
+    background-color: rgb(21, 238, 21);
+}
+table, th, td {
+    border:1px solid black;
+  }
+  .table{
+    display: flex;
+    gap: 1vw;
+  }
+  #s2p{
+    background-color: rgb(237, 34, 68);
+    width: 100%;
+    color: black;
+  }
